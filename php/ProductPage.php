@@ -166,34 +166,6 @@ $total_products = $pdo->query('SELECT * FROM products')->rowCount();
       </div>
     </div>
   </body>
-
-      <!--? ==========Footer Section ========== -->
-
-      <footer class="footer">
-      <div class="container footer-container">
-          <div class="footer-item">
-              <h2>MediaMarkt</h2>
-              <span>Welkom onze nieuwe online shopping winkel.<br></span>
-          </div>
-          <div class="footer-item">
-              <h2>Support</h2>
-              <p>Gouda, Nederland</p>
-              <a href="mailto:MediaShop@email.nl">MediaShop@gmail.com</a>
-              <p>+31 042 345 6729</p>
-          </div>
-          <div class="footer-item">
-              <h2>Account</h2>
-              <a href="#">Dashboard</a>
-              <a href="login.php">Sign Up</a>
-              <a href="login.php">Login</a>
-          </div>
-          <div class="footer-item">
-              <h2>Quick Link</h2>
-              <p>Contact</p>
-              
-          </div>
-      </div>
-  </footer>
   
   
 
