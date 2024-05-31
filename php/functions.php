@@ -1,7 +1,7 @@
 <?php
 function pdo_connect_mysql() {
     // Update the details below with your MySQL details
-    $DATABASE_HOST = 'localhost:3307';
+    $DATABASE_HOST = 'localhost';
     $DATABASE_USER = 'root';
     $DATABASE_PASS = '';
     $DATABASE_NAME = 'alabo3';
