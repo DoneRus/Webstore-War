@@ -75,7 +75,11 @@ if(isset($_POST['login'])) {
     <link rel="stylesheet" href="../login.css">
 
 </head>
+<header>
+
+</header>
 <body>
+ 
 <!--? ========== Signup page Section ========== -->
     
 <div class="container" id="container">

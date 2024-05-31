@@ -26,7 +26,7 @@ $total_products = $pdo->query('SELECT * FROM products')->rowCount();
     <title>Product Page</title>
     <link href="../style/style1.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="stylesheet" href="../styleNew.css">
   </head>
   <body>
     <div class="navbar">

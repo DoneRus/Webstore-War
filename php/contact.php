@@ -11,10 +11,10 @@
     <!--? ========== Navbar Section ========== -->
     <section>
         <nav class="navbar">
-            <a href="index.php" class="brending">MediaMarkt</a>
+            <a href="home.php" class="brending">MediaMarkt</a>
         <ul class="nav_menu">
             <li class="li nav_item">
-                <a href="product.php" class="nav_link"><i class="ri-box-1-fill"></i>Producten</a>
+                <a href="products.php" class="nav_link"><i class="ri-box-1-fill"></i>Producten</a>
             </li>
             <li class="li_input nav_item">
                 <input type="text" placeholder="Search here...">

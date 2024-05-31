@@ -57,6 +57,7 @@ $total_products = $pdo->query('SELECT * FROM products')->rowCount();
         </div>
       </nav>
     </section>
+    
 
     </body>
 </html>
@@ -227,4 +228,3 @@ $total_products = $pdo->query('SELECT * FROM products')->rowCount();
   </body>
 
 
-<?=template_footer()?>

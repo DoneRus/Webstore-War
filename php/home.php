@@ -13,7 +13,7 @@
 <!--? ========== Navbar Section ========== -->
     <section>
       <nav class="navbar">
-        <a href="index.php" class="brending">MediaMarkt</a>
+        <a href="home.php" class="brending">MediaMarkt</a>
         <ul class="nav_menu">
             <li class="li nav_item">
               <a href="products.php" class="nav_link"><i class="ri-box-1-fill"></i>Producten</a>
@@ -26,7 +26,7 @@
               <a href="account.php" class="nav_link"><i class="ri-account-circle-fill"></i><?php if(isset($_SESSION['user_name'])){echo $_SESSION['user_name'];}else{echo "Account";} ?></a>
             </li>
             <li class="li nav_item">
-              <a href="winkelwagentje.php" class="nav_link"><i class="ri-shopping-cart-fill"></i>Winkelwagentje</a>
+              <a href="index2.php?page=cart" class="nav_link"><i class="ri-shopping-cart-fill"></i>Winkelwagentje</a>
             </li>
             <li class="li nav_item">
               <a href="contact.php" target="_blank" class="nav_link"><i class="ri-contacts-fill"> Contact</i></a>
