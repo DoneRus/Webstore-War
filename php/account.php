@@ -57,7 +57,7 @@ if(isset($_POST['login'])) {
         $_SESSION['user_email'] = $row['email'];
 
         // Redirect to index.php
-        header("location:index.php");
+        header("location:home.php");
         exit;
     } else {
         echo "Invalid email or password.";

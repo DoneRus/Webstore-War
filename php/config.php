@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$database = "alaperiode2024";
+$database = "shoppingcart";
 
 // Create connection  - object,paramaters
 $conn = new mysqli($servername, $username, $password, $database);

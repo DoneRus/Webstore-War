@@ -23,7 +23,7 @@
               <i class="ri-search-line"></i>
             </li>
             <li class="li nav_item">
-              <a href="account.php" class="nav_link"><i class="ri-account-circle-fill"></i><?php if(isset($_SESSION['user_name'])){echo $_SESSION['user_name'];}else{echo "Account";} ?></a>
+              <a href="account.php" class="nav_link"><i class="ri-account-circle-fill"></i><?php if(isset($_SESSION['user_name'])){echo $_SESSION['user_name'];}else{echo "Noone";} ?></a>
             </li>
             <li class="li nav_item">
               <a href="index2.php?page=cart" class="nav_link"><i class="ri-shopping-cart-fill"></i>Winkelwagentje</a>
