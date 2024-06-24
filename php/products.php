@@ -24,13 +24,12 @@ $total_products = $pdo->query('SELECT * FROM products')->rowCount();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
-
+    <link rel="stylesheet" href="../styleNew.css">
     <title>productpage</title>
 </head>
 <body>
 <!--? ========== Navbar Section ========== -->
-    <section>
-          <link rel="stylesheet" href="../styleNew.css">
+<section>
       <nav class="navbar">
         <a href="home.php" class="brending">MediaMarkt</a>
         <ul class="nav_menu">
@@ -42,13 +41,25 @@ $total_products = $pdo->query('SELECT * FROM products')->rowCount();
               <i class="ri-search-line"></i>
             </li>
             <li class="li nav_item">
-              <a href="account.php" class="nav_link"><i class="ri-account-circle-fill"></i><?php if(isset($_SESSION['user_name'])){echo $_SESSION['user_name'];}else{echo "Account";} ?></a>
-            </li>
+        <a href="<?php echo isset($_SESSION['user_name']) ? 'InloggegevensPage.php' : 'account.php'; ?>" class="nav_link">
+        <i class="ri-account-circle-fill"></i>
+        <?php
+      if (isset($_SESSION['user_name'])) {
+        echo $_SESSION['user_name'];
+      } else {
+        echo "Account";
+      }
+       ?>
+      </a>
+    </li>
             <li class="li nav_item">
               <a href="index2.php?page=cart" class="nav_link"><i class="ri-shopping-cart-fill"></i>Winkelwagentje</a>
             </li>
             <li class="li nav_item">
               <a href="contact.php" target="_blank" class="nav_link"><i class="ri-contacts-fill"> Contact</i></a>
+            </li>
+            <li class="li nav_item">
+              <a href="loguit.php" class="nav_link"><i class="ri-shopping-cart-fill"></i>LogUit</a>
             </li>
         </ul>
         <div class="hamburger">

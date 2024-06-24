@@ -1,3 +1,17 @@
+<?php
+// Check if session has already started
+if (session_status() == PHP_SESSION_NONE) {
+  // Start the session if it hasn't been started yet
+  session_start();
+}
+
+// Retrieve user data from session variables
+$user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
+$user_name = isset($_SESSION['user_name']) ? $_SESSION['user_name'] : null;
+$user_email = isset($_SESSION['user_email']) ? $_SESSION['user_email'] : null;
+?>
+
+
 
 
 <!DOCTYPE html>
@@ -23,13 +37,25 @@
               <i class="ri-search-line"></i>
             </li>
             <li class="li nav_item">
-              <a href="account.php" class="nav_link"><i class="ri-account-circle-fill"></i><?php if(isset($_SESSION['user_name'])){echo $_SESSION['user_name'];}else{echo "Noone";} ?></a>
-            </li>
+        <a href="<?php echo isset($_SESSION['user_name']) ? 'InloggegevensPage.php' : 'account.php'; ?>" class="nav_link">
+        <i class="ri-account-circle-fill"></i>
+        <?php
+      if (isset($_SESSION['user_name'])) {
+        echo $_SESSION['user_name'];
+      } else {
+        echo "Account";
+      }
+       ?>
+      </a>
+    </li>
             <li class="li nav_item">
               <a href="index2.php?page=cart" class="nav_link"><i class="ri-shopping-cart-fill"></i>Winkelwagentje</a>
             </li>
             <li class="li nav_item">
               <a href="contact.php" target="_blank" class="nav_link"><i class="ri-contacts-fill"> Contact</i></a>
+            </li>
+            <li class="li nav_item">
+              <a href="loguit.php" class="nav_link"><i class="ri-shopping-cart-fill"></i>LogUit</a>
             </li>
         </ul>
         <div class="hamburger">

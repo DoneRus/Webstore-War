@@ -86,7 +86,7 @@ if ($products_in_cart) {
 
 <?=template_header('Cart')?>
 <div>
-<section>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
 <link rel="stylesheet" href="../styleNew.css">
       <nav class="navbar">
         <a href="home.php" class="brending">MediaMarkt</a>
@@ -99,13 +99,25 @@ if ($products_in_cart) {
               <i class="ri-search-line"></i>
             </li>
             <li class="li nav_item">
-              <a href="account.php" class="nav_link"><i class="ri-account-circle-fill"></i><?php if(isset($_SESSION['user_name'])){echo $_SESSION['user_name'];}else{echo "Account";} ?></a>
-            </li>
+        <a href="<?php echo isset($_SESSION['user_name']) ? 'InloggegevensPage.php' : 'account.php'; ?>" class="nav_link">
+        <i class="ri-account-circle-fill"></i>
+        <?php
+      if (isset($_SESSION['user_name'])) {
+        echo $_SESSION['user_name'];
+      } else {
+        echo "Account";
+      }
+       ?>
+      </a>
+    </li>
             <li class="li nav_item">
               <a href="index2.php?page=cart" class="nav_link"><i class="ri-shopping-cart-fill"></i>Winkelwagentje</a>
             </li>
             <li class="li nav_item">
               <a href="contact.php" target="_blank" class="nav_link"><i class="ri-contacts-fill"> Contact</i></a>
+            </li>
+            <li class="li nav_item">
+              <a href="loguit.php" class="nav_link"><i class="ri-shopping-cart-fill"></i>LogUit</a>
             </li>
         </ul>
         <div class="hamburger">
@@ -115,7 +127,6 @@ if ($products_in_cart) {
         </div>
       </nav>
     </section>
-</div>
 <div class="cart content-wrapper">
     
     <h1>Shopping Cart</h1>
@@ -170,3 +181,11 @@ if ($products_in_cart) {
 </div>
 
 <?=template_footer()?>
+<!-- <script>
+  (function() {
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = '../styleNew.css'; // Path to your specific stylesheet
+    document.getElementById('styleNew').appendChild(link);
+  })();
+</script> -->

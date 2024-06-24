@@ -4,15 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inloggen | MediaMarkt</title>
-    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="stylesheet" href="../styleNew.css">
   </head>
   <body style="font-family: -apple-system, BlinkMacSystemFont, segoe ui, roboto, oxygen, ubuntu, cantarell, fira sans, droid sans, helvetica neue, Arial, sans-serif;">
-  <div class="navbar">
-    <a href="home.php">HomePage</a>
-    <a href="products.php">Producten</a>
-    <a href="index2.php?page=cart">Winkelwagentje</a>
-    <a href="InloggegevensPage.php">Mijn account</a>
-</div>
+  <section>
+      <nav class="navbar">
+        <a href="home.php" class="brending">MediaMarkt</a>
+        <ul class="nav_menu">
+            <li class="li nav_item">
+              <a href="products.php" class="nav_link"><i class="ri-box-1-fill"></i>Producten</a>
+            </li>
+            <li class="li_input nav_item">
+              <input type="text" placeholder="Search here...">
+              <i class="ri-search-line"></i>
+            </li>
+            <li class="li nav_item">
+        <a href="<?php echo isset($_SESSION['user_name']) ? 'InloggegevensPage.php' : 'account.php'; ?>" class="nav_link">
+        <i class="ri-account-circle-fill"></i>
+        <?php
+      if (isset($_SESSION['user_name'])) {
+        echo $_SESSION['user_name'];
+      } else {
+        echo "Account";
+      }
+       ?>
+      </a>
+    </li>
+            <li class="li nav_item">
+              <a href="index2.php?page=cart" class="nav_link"><i class="ri-shopping-cart-fill"></i>Winkelwagentje</a>
+            </li>
+            <li class="li nav_item">
+              <a href="contact.php" target="_blank" class="nav_link"><i class="ri-contacts-fill"> Contact</i></a>
+            </li>
+            <li class="li nav_item">
+              <a href="loguit.php" class="nav_link"><i class="ri-shopping-cart-fill"></i>LogUit</a>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+      </nav>
+    </section>
 
     <div style="text-align: center">
       <h2 class="two">Inloggen</h2>

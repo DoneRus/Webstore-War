@@ -10,24 +10,36 @@
 <body>
     <!--? ========== Navbar Section ========== -->
     <section>
-        <nav class="navbar">
-            <a href="home.php" class="brending">MediaMarkt</a>
+      <nav class="navbar">
+        <a href="home.php" class="brending">MediaMarkt</a>
         <ul class="nav_menu">
             <li class="li nav_item">
-                <a href="products.php" class="nav_link"><i class="ri-box-1-fill"></i>Producten</a>
+              <a href="products.php" class="nav_link"><i class="ri-box-1-fill"></i>Producten</a>
             </li>
             <li class="li_input nav_item">
-                <input type="text" placeholder="Search here...">
-                <i class="ri-search-line"></i>
+              <input type="text" placeholder="Search here...">
+              <i class="ri-search-line"></i>
             </li>
             <li class="li nav_item">
-                <a href="account.php" class="nav_link"><i class="ri-account-circle-fill"></i><?php if(isset($_SESSION['user_name'])){echo $_SESSION['user_name'];}else{echo "Account";} ?></a>
+        <a href="<?php echo isset($_SESSION['user_name']) ? 'InloggegevensPage.php' : 'account.php'; ?>" class="nav_link">
+        <i class="ri-account-circle-fill"></i>
+        <?php
+      if (isset($_SESSION['user_name'])) {
+        echo $_SESSION['user_name'];
+      } else {
+        echo "Account";
+      }
+       ?>
+      </a>
+    </li>
+            <li class="li nav_item">
+              <a href="index2.php?page=cart" class="nav_link"><i class="ri-shopping-cart-fill"></i>Winkelwagentje</a>
             </li>
             <li class="li nav_item">
-                <a href="winkelwagentje.php" class="nav_link"><i class="ri-shopping-cart-fill"></i>Winkelwagentje</a>
+              <a href="contact.php" target="_blank" class="nav_link"><i class="ri-contacts-fill"> Contact</i></a>
             </li>
             <li class="li nav_item">
-                <a href="contact.php" target="_blank" class="nav_link"><i class="ri-contacts-fill"> Contact</i></a>
+              <a href="loguit.php" class="nav_link"><i class="ri-shopping-cart-fill"></i>LogUit</a>
             </li>
         </ul>
         <div class="hamburger">
@@ -35,7 +47,7 @@
             <span class="bar"></span>
             <span class="bar"></span>
         </div>
-        </nav>
+      </nav>
     </section>
         <!--? ========== Contact Section ========== -->
         <section>
