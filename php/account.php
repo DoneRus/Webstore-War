@@ -103,7 +103,7 @@ if(isset($_POST['login'])) {
             <input type="email" name="login_email" placeholder="Email" required />
             <input type="password" name="login_password" placeholder="Password" required />
             <button type="submit" name="login">Sign In</button>
-            <p>Don't have an account? <a href="login.php">Sign Up</a></p>
+            <p>Forgot your password? <a href="forgot-password.php"><br>Reset Password</a></p>
         </form>
 	</div>
 	<div class="overlay-container">
