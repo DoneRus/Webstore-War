@@ -1,8 +1,16 @@
 <?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
 require_once("config.php");
-require_once("PHPMailer/PHPMailer.php");
-require_once("PHPMailer/Exception.php");
-require_once("PHPMailer/SMTP.php");
+require_once("PHPMailer/src/PHPMailer.php");
+require_once("PHPMailer/src/Exception.php");
+require_once("PHPMailer/src/SMTP.php");
+
+
+
 if(isset($_POST['subforgot'])){ 
     $login = $_REQUEST['login_var'];
     
@@ -28,8 +36,8 @@ if(isset($_POST['subforgot'])){
                 $mail->isSMTP(); // Set mailer to use SMTP
                 $mail->Host = 'smtp.gmail.com'; // Specify main and backup SMTP servers
                 $mail->SMTPAuth = true; // Enable SMTP authentication
-                $mail->Username = 'your-email@yourdomain.com'; // SMTP username
-                $mail->Password = 'your-email-password'; // SMTP password
+                $mail->Username = 'forgetfullbeans@gmail.com'; // SMTP username
+                $mail->Password = 'pkpxdjjatsvthvtz'; // SMTP password
                 $mail->SMTPSecure = 'tls'; // Enable TLS encryption, `ssl` also accepted
                 $mail->Port = 587; // TCP port to connect to
 
@@ -40,7 +48,7 @@ if(isset($_POST['subforgot'])){
                 // Content
                 $mail->isHTML(true); // Set email format to HTML
                 $mail->Subject = 'You have received password reset email';
-                $mail->Body = 'Your password reset link:<br>https://webshopwar.000webhostapp.com/Webstore-War/php/forgot_process.php?token=' . $token . '<br>Reset your password with this link. Click or open in new tab.<br><br>' . $credits;
+                $mail->Body = 'Your password reset link:<br>http://localhost:8081/php/form/password-reset.php?token='.$token. '<br>Reset your password with this link. Click or open in new tab.<br><br>' . $credits;
 
                 // Send email
                 $mail->send();
