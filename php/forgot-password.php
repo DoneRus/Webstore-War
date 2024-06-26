@@ -21,7 +21,6 @@ if(isset($_SESSION["login_sess"]))
  	<form action="forgot_process.php" method="POST">
     <div class="login_form">
   <div class="form-group">
- <img src="https://technosmarter.com/assets/images/logo.png" alt="Techno Smarter" class="img-fluid logo"> 
  <?php if(isset($_GET['err'])){
  $err=$_GET['err'];
  echo '<p class="errmsg">No user found. </p>';
